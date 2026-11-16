@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiệp mời cưới · Ngọc Hân &amp; Nhật Long</title>
+  <meta name="description" content="Trân trọng kính mời bạn đến dự lễ cưới của Ngọc Hân &amp; Nhật Long, 10h sáng ngày 20/12/2026.">
+  <meta property="og:title" content="Thiệp mời cưới · Ngọc Hân & Nhật Long">
+  <meta property="og:description" content="20/12/2026 · 10:00 · Tại nhà">
+  <meta property="og:image" content="images/cover.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<!-- Cover: tap to open (also unlocks music autoplay) -->
+<div id="cover" class="cover">
+  <div class="cover-bg" id="coverBg"></div>
+  <div class="cover-inner">
+    <p class="small-caps">Thiệp mời cưới</p>
+    <h1 class="script">Ngọc Hân <span>&amp;</span> Nhật Long</h1>
+    <p class="cover-date">20 · 12 · 2026</p>
+    <button id="openBtn" class="btn">Mở thiệp ✉</button>
+  </div>
+</div>
+
+<main id="main" class="hidden">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-inner reveal">
+      <p class="small-caps">Chúng mình sắp kết hôn</p>
+      <h2 class="script big">Ngọc Hân<br><span>&amp;</span><br>Nhật Long</h2>
+      <p class="hero-date">Chủ nhật · 20.12.2026</p>
+    </div>
+    <a href="#couple" class="scroll-hint" aria-label="Cuộn xuống">⌄</a>
+  </section>
+
+  <!-- COUPLE -->
+  <section id="couple" class="section">
+    <div class="wrap reveal">
+      <p class="small-caps">Trân trọng kính mời</p>
+      <h2 class="title">Hai gia đình xin báo tin vui</h2>
+      <div class="couple">
+        <figure>
+          <div class="portrait" data-img="images/couple.jpg"></div>
+          <figcaption>
+            <span class="name script">Ngọc Hân <i>&amp;</i> Nhật Long</span>
+            <span class="role">Cô dâu · Chú rể</span>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="lead">Chúng mình rất hạnh phúc được báo tin vui và mong có sự hiện diện của bạn trong ngày trọng đại của chúng mình.</p>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="section alt">
+    <div class="wrap reveal">
+      <p class="small-caps">Đếm ngược đến ngày cưới</p>
+      <div class="countdown" id="countdown">
+        <div><b id="cdD">--</b><span>ngày</span></div>
+        <div><b id="cdH">--</b><span>giờ</span></div>
+        <div><b id="cdM">--</b><span>phút</span></div>
+        <div><b id="cdS">--</b><span>giây</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT -->
+  <section id="event" class="section">
+    <div class="wrap reveal">
+      <p class="small-caps">Thông tin buổi lễ</p>
+      <h2 class="title">Lễ thành hôn</h2>
+      <div class="card">
+        <div class="event-grid">
+          <div><span class="label">Thời gian</span><b>10:00 sáng</b></div>
+          <div><span class="label">Ngày</span><b>Chủ nhật, 20/12/2026</b></div>
+          <div><span class="label">Địa điểm</span><b>Tại tư gia</b></div>
+        </div>
+        <a class="btn ghost" target="_blank" rel="noopener"
+           href="https://www.google.com/maps?q=10.347403,106.525732">📍 Xem chỉ đường trên Google Maps</a>
+        <a class="btn ghost" id="calBtn" href="#">📅 Thêm vào lịch</a>
+      </div>
+      <div class="map">
+        <iframe title="Bản đồ" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=10.347403,106.525732&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section alt">
+    <div class="wrap reveal">
+      <p class="small-caps">Album ảnh cưới</p>
+      <h2 class="title">Khoảnh khắc của chúng mình</h2>
+      <div class="gallery" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="section">
+    <div class="wrap narrow reveal">
+      <p class="small-caps">Xác nhận tham dự</p>
+      <h2 class="title">Bạn sẽ đến chứ?</h2>
+      <form id="rsvpForm" class="card form" novalidate>
+        <label>Họ và tên
+          <input name="name" type="text" required maxlength="80" placeholder="Nguyễn Văn A" autocomplete="name">
+        </label>
+
+        <fieldset>
+          <legend>Bạn có tham dự không?</legend>
+          <label class="radio"><input type="radio" name="attending" value="Có" required> <span>Có, mình sẽ đến 🎉</span></label>
+          <label class="radio"><input type="radio" name="attending" value="Không"> <span>Rất tiếc, mình không đến được</span></label>
+        </fieldset>
+
+        <label id="guestsWrap">Số người tham dự (kể cả bạn)
+          <select name="guests">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+          </select>
+        </label>
+
+        <fieldset id="stayWrap">
+          <legend>Bạn có ở lại đêm trước ngày cưới (19/12) không?</legend>
+          <label class="radio"><input type="radio" name="stay" value="Đi về trong ngày" checked> <span>Không, mình đi về trong ngày</span></label>
+          <label class="radio"><input type="radio" name="stay" value="Tự lo chỗ ở"> <span>Có, mình tự lo chỗ ở</span></label>
+          <label class="radio"><input type="radio" name="stay" value="Nhờ hỗ trợ chỗ ở"> <span>Có, nhờ gia đình hỗ trợ chỗ ở</span></label>
+        </fieldset>
+
+        <label>Lời chúc gửi đến cô dâu chú rể
+          <textarea name="message" rows="4" maxlength="500" placeholder="Chúc hai bạn trăm năm hạnh phúc..."></textarea>
+        </label>
+
+        <!-- honeypot chống spam -->
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button type="submit" class="btn" id="submitBtn">Gửi xác nhận</button>
+        <p id="formMsg" class="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="script">Ngọc Hân &amp; Nhật Long</p>
+    <p>Rất hân hạnh được đón tiếp bạn ♡</p>
+  </footer>
+</main>
+
+<!-- Music controls -->
+<button id="musicBtn" class="fab hidden" aria-label="Bật/tắt nhạc" title="Bật/tắt nhạc">♪</button>
+<div id="ytHolder" aria-hidden="true"></div>
+
+<!-- Theme switcher (xoá khối này khi đã chọn xong theme) -->
+<div id="themeBar" class="themebar hidden" aria-label="Chọn theme">
+  <button data-theme="sage" title="Xanh sage"></button>
+  <button data-theme="forest" title="Xanh rừng"></button>
+  <button data-theme="mint" title="Xanh bạc hà"></button>
+</div>
+
+<script src="config.js?v=2"></script>
+<script src="script.js?v=4"></script>
+</body>
+</html>
