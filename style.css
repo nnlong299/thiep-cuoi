@@ -71,7 +71,12 @@ body {
 /* ===== Couple ===== */
 .couple { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
 .couple figure { margin: 0; }
+.name b { font-weight: 400; white-space: nowrap; }
 .name i { font-style: normal; color: var(--accent); }
+@media (max-width: 520px) {
+  .name { font-size: 2.2rem; }
+  .name i { display: block; font-size: 1.6rem; line-height: 1; }
+}
 .portrait { width: min(340px, 80vw); aspect-ratio: 2 / 3; border-radius: 170px 170px 16px 16px; border: 4px solid var(--card); outline: 1px solid var(--accent);
   background: linear-gradient(160deg, var(--bg-alt), var(--accent)) center/cover; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
 figcaption { margin-top: 1rem; display: flex; flex-direction: column; }
